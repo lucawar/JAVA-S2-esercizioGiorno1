@@ -49,7 +49,7 @@ public class MainEsercizio1 {
 				// NUOVO ARRAY CON VALORI MODIFICATI
 				array[index] = value;
 
-				System.out.println("Nuovo stato dell'array: " + Arrays.toString(array));
+				System.out.println("Nuovo array: " + Arrays.toString(array));
 
 				// GESTISCO GLI "EXCEPTION"
 			} catch (IllegalArgumentException e) {
