@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-import Exception.InvalidPositionException;
+import exception.InvalidPositionException;
 
 public class MainEsercizio1 {
 
@@ -46,10 +46,12 @@ public class MainEsercizio1 {
 
 				validatePosition(index);
 
-				// ARRAY CON VALORI MODIFICATI
+				// NUOVO ARRAY CON VALORI MODIFICATI
 				array[index] = value;
 
 				System.out.println("Nuovo stato dell'array: " + Arrays.toString(array));
+
+				// GESTISCO GLI "EXCEPTION"
 			} catch (IllegalArgumentException e) {
 				System.out.println("Si è verificato un errore: " + e.getMessage());
 
@@ -57,8 +59,6 @@ public class MainEsercizio1 {
 			} catch (InvalidPositionException e) {
 				System.out.println("Si è verificato un errore: " + e.getMessage());
 				input.nextLine();
-			} finally {
-				input.close();
 			}
 		} while (true);
 

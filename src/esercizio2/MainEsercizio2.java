@@ -15,10 +15,10 @@ public class MainEsercizio2 {
 			int litri = Integer.parseInt(input.nextLine());
 
 			if (litri == 0) {
-				throw new ArithmeticException("Impossibile calcolare il numero di km/litro.");
+				throw new ArithmeticException("Impossibile calcolare il numero dei litri.");
 			}
 
-			double kmPerLitro = km / litri;
+			int kmPerLitro = km / litri;
 			System.out.println("Il numero di km/litro percorsi è: " + kmPerLitro);
 		} catch (ArithmeticException e) {
 			System.out.println("ERRORE: divisione per zero! " + e.getMessage());
