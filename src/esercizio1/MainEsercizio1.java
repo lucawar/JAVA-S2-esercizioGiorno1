@@ -44,9 +44,7 @@ public class MainEsercizio1 {
 				System.out.println("Inserisci la posizione dell'array (0-4) per sostituire il numero:");
 				index = Integer.parseInt(input.nextLine());
 
-				if (index == 0 || index >= array.length) {
-					throw new InvalidPositionException("");
-				}
+				validatePosition(index);
 
 				// ARRAY CON VALORI MODIFICATI
 				array[index] = value;
@@ -56,9 +54,6 @@ public class MainEsercizio1 {
 				System.out.println("Si è verificato un errore: " + e.getMessage());
 
 				input.nextLine();
-			} catch (InvalidPositionException e) {
-				System.out.println(e.getMessage());
-				input.nextLine();
 			}
 		} while (true);
 
@@ -66,8 +61,8 @@ public class MainEsercizio1 {
 		input.close();
 	}
 
-	public void validatePosition(int index) throws InvalidPositionException {
-		if (index < 0 || index >= 5) {
+	public static void validatePosition(int index) throws InvalidPositionException {
+		if (index < 0 || index >= 4) {
 			throw new InvalidPositionException("Posizione non valida! Deve essere compresa tra 0 e 4.");
 		}
 	}
