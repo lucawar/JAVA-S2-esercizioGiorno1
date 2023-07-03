@@ -54,6 +54,9 @@ public class MainEsercizio1 {
 				System.out.println("Si è verificato un errore: " + e.getMessage());
 
 				input.nextLine();
+			} catch (InvalidPositionException e) {
+				System.out.println("Si è verificato un errore: " + e.getMessage());
+				input.nextLine();
 			}
 		} while (true);
 
