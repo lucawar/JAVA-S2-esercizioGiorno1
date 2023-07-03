@@ -57,6 +57,8 @@ public class MainEsercizio1 {
 			} catch (InvalidPositionException e) {
 				System.out.println("Si è verificato un errore: " + e.getMessage());
 				input.nextLine();
+			} finally {
+				input.close();
 			}
 		} while (true);
 
@@ -66,7 +68,8 @@ public class MainEsercizio1 {
 
 	public static void validatePosition(int index) throws InvalidPositionException {
 		if (index < 0 || index >= 4) {
-			throw new InvalidPositionException("Posizione non valida! Deve essere compresa tra 0 e 4.");
+			throw new InvalidPositionException(
+					"Posizione non valida! La posizione inserita deve essere compresa tra 0 e 4.");
 		}
 	}
 }
